@@ -4,44 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>homepage</title>
+    <link rel="stylesheet" href="css/editer.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li>
-            <a><img src="images/bxs-x-circle.svg" alt="" /></a>
-          </li>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="aboutme.html">About me</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="hobbies.html">Hobbies</a></li>
-          <li><a href="contact.html">contact</a></li>
+      <nav class="nav">
+        <ul class="sidebar">
+          <li><a class="current" href="home.html">Home</a></li>
+          <li><a class="ho" href="aboutme.html">About me</a></li>
+          <li><a class="ho" href="cv.html">CV</a></li>
+          <li><a class="ho" href="hobbies.html">Hobbies</a></li>
+          <li><a class="ho" href="contact.html">contact</a></li>
         </ul>
-        <ul>
-          <li><a href="home.html">Home</a></li>
+        <ul class="mainnav">
+          <li><a class="currentnav" href="home.html">Home</a></li>
           <li><a href="aboutme.html">About me</a></li>
           <li><a href="cv.html">CV</a></li>
           <li><a href="hobbies.html">Hobbies</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <ul>
-          <li>
-            <a><img src="images/bx-menu.svg" alt="" /></a>
-          </li>
-        </ul>
+        <li class="menubar">
+          <a><img src="images/bx-menu.svg" alt="" /></a>
+        </li>
       </nav>
     </header>
 
     <main>
-      <section>
+      <section class="home">
         <h2>Welcome!!! to My personal portfolio</h2>
-        <article>
-          <div>
+        <article class="intro">
+          <div class="profile">
             <img src="images/5911294615292593055.jpg" alt="my profile photo" />
           </div>
-          <h3>Meti Kejelcha</h3>
-          <p>Software Engineer and web developer</p>
+          <div class="text">
+            <h3>Meti Kejelcha</h3>
+            <p>
+              <span class="span1">Software Engineer</span
+              ><span class="span2"> and web developer</span>
+            </p>
+          </div>
         </article>
       </section>
     </main>
@@ -53,8 +54,9 @@
             alt=""
           />st.Gofa,N/S/L..,ADDIS ABABA,ETHIOPIA
         </p>
-        <p>METI KEJELCHA</p>
+        <p class="name">METI KEJELCHA</p>
       </div>
     </footer>
+    <script src="java.js"></script>
   </body>
 </html>

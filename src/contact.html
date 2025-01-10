@@ -4,46 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>contact page</title>
+    <link rel="stylesheet" href="css/editer.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li>
-            <a><img src="images/bxs-x-circle.svg" alt="" /></a>
-          </li>
+      <nav class="nav">
+        <ul class="sidebar">
+          <li><a class="ho" href="home.html">Home</a></li>
+          <li><a class="ho" href="aboutme.html">About me</a></li>
+          <li><a class="ho" href="cv.html">CV</a></li>
+          <li><a class="ho" href="hobbies.html">Hobbies</a></li>
+          <li><a class="current" href="contact.html">contact</a></li>
+        </ul>
+        <ul class="mainnav">
           <li><a href="home.html">Home</a></li>
           <li><a href="aboutme.html">About me</a></li>
           <li><a href="cv.html">CV</a></li>
           <li><a href="hobbies.html">Hobbies</a></li>
-          <li><a href="contact.html">contact</a></li>
+          <li><a class="currentnav" href="contact.html">Contact</a></li>
         </ul>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="aboutme.html">About me</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="hobbies.html">Hobbies</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <ul>
-          <li>
-            <a><img src="images/bx-menu.svg" alt="" /></a>
-          </li>
-        </ul>
+        <li class="menubar">
+          <a><img src="images/bx-menu.svg" alt="" /></a>
+        </li>
       </nav>
     </header>
 
     <main>
-      <article>
+      <div class="contact-header">
         <h3>Contact me</h3>
-        <p>
-          <img src="images/icons8-email-64.png" alt="" />metike400@gmail.com
-        </p>
-        <p><img src="images/icons8-telegram-94.png" alt="" />Meti</p>
-        <p><img src="images/icons8-github-50.png" alt="" />MetiKejelcha</p>
-        <p><img src="images/icons8-phone-48.png" alt="" />+251909093236</p>
-        <p><img src="images/icons8-phone-48.png" alt="" />+251763190446</p>
-      </article>
+      </div>
+      <div class="contact-page">
+        <article class="contact-details">
+          <p>
+            <a href="mailto:metike400@gmail.com">
+              <img src="images/icons8-email-64.png" alt="" />metike400@gmail.com
+            </a>
+          </p>
+
+          <p>
+            <a href="https://t.me/Meti" target="_blank" rel="noopener">
+              <img src="images/icons8-telegram-94.png" alt="" />Meti
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="https://github.com/MetiKejelcha"
+              target="_blank"
+              rel="noopener"
+            >
+              <img src="images/icons8-github-50.png" alt="" />MetiKejelcha
+            </a>
+          </p>
+
+          <p>
+            <a href="tel:+251909093236">
+              <img src="images/icons8-phone-48.png" alt="" />+251909093236
+            </a>
+          </p>
+          <p>
+            <a href="tel:+251763190446">
+              <img src="images/icons8-phone-48.png" alt="" />+251763190446
+            </a>
+          </p>
+        </article>
+      </div>
     </main>
     <footer>
       <div>
@@ -53,8 +78,9 @@
             alt=""
           />st.Gofa,N/S/L..,ADDIS ABABA,ETHIOPIA
         </p>
-        <p>METI KEJELCHA</p>
+        <p class="name">METI KEJELCHA</p>
       </div>
     </footer>
+    <script src="java.js"></script>
   </body>
 </html>

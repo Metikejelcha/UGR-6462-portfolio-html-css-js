@@ -1,0 +1,1465 @@
+:root{
+    --header-footer:rgba(188, 204, 217, 1);
+    --text-strong:rgba(214, 216, 226, 1);
+    --main-background:rgba(68, 71, 90, 1);
+    --headerfooter-text:rgba(6, 19, 28, 1);
+    --normal:rgba(42, 157, 244, 1);
+    --sidebar-background:rgba(69, 68, 72, 0.95);
+    --hover-background:rgb(180, 208, 230);
+    --primary-brand:rgba(98, 82, 205, 1);
+  }
+  *{
+    box-sizing: border-box;
+      margin: 0px;
+      padding: 0px;
+      font-family: 'Roboto', sans-serif;
+      
+  }
+  h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    
+  }
+  h1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  h4{
+    padding-top: 10px;
+  }
+  
+  html{
+    height: 100%;
+  }
+  body {
+  
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  header {
+    width: 100%;
+    background-color: var(--header-footer);
+    padding: 15px 20px;
+    height: auto;
+    box-sizing: border-box;
+  }
+  
+  main{  
+    color: var(--text-strong);
+    padding-left: 5%;
+    padding-right: 5%; 
+    min-height: 100%;
+    height: 100%;
+    flex-grow: 1;
+    background-color: var(--main-background);
+    padding-top: 0%;
+    padding-bottom: 7%;
+  }
+  
+  .currentnav{
+    color:white;
+    padding: 5px 10px;
+    border-radius: 40px;
+    background-color: var(--normal);
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-end;
+  }
+    
+  .mainnav, .sidebar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+    
+  .mainnav {
+    min-width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+  }
+    
+  .mainnav li a {
+    color:var(--headerfooter-text);
+    text-decoration: none;
+    font-size: 14px;
+  }
+    
+    
+  .sidebar li a {
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight:400;
+    padding: 10px;
+    display: block;
+  }
+    
+  ul li a img {
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+    display: none;
+  }
+  footer {
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Ensure it spans the viewport width */
+    background-color: var(--header-footer);
+    color: var(--headerfooter-text);
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  footer img{
+    height: 20px;
+    width: 20px;
+  }
+  
+  
+  .menubar{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 11111111;
+  }
+  
+  
+  .ho:hover {
+    background-color: var(--hover-background);
+    border-radius: 5px;
+    color: var(--headerfooter-text);
+    
+  }
+  .current{
+    background-color: var(--normal);
+    color: white;
+  }
+  
+  
+  .closebtn img{
+    height: 25px;
+    width: 25px;
+    
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  /*hobbies page*/
+  
+  .section1{
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-strong);
+    
+  }
+  .section1 p{
+   
+    text-align: start;
+  }  
+  .flex img {
+    
+    object-fit: cover;
+    
+  width: 100%; /* Makes images responsive */
+  
+  
+  
+  }
+  .flexmain{
+    display: grid;
+  }
+  .thevideo{
+    
+    width: 100%;
+    height: 100%;
+    padding: 0 3%;
+    padding-bottom: 6%;
+    padding-top: 4%;
+  }
+  .flex {
+    text-align: center;
+  }.thevideo {
+    width: 100%; /* Full width of the page */
+    max-width: 1200px; /* Constrain to a max width */
+    margin: 0 auto; /* Center the container */
+    padding: 0; /* No extra padding */
+  }
+  
+  video {
+    width: 100%; /* Video takes full width of container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Eliminate inline spacing issues */
+    object-fit: cover;
+    padding-bottom: 5%;
+    padding-top: 4%;
+    
+  }
+  .audio-player-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1a1a;
+    padding: 20px;
+    border: 1px solid #353232;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  audio {
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    background-color: #1d2431; /* Brown background color */
+    padding: 5px;
+  }
+ 
+  @media (min-width: 1024px) {
+    /* Styles for desktop screens */
+    
+    .flexmain {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .flex {
+      text-align: center;
+      width: 23%;
+  }.flexmain {
+      display: grid;
+      gap: 16px; /* Adjust spacing between grid items */
+      
+  }
+  video{
+    height: 400Px;
+  }
+  }
+  
+  
+  
+  
+  /* Optional: Style for individual .flex items */
+  
+  
+  @media (min-width: 768px) and (max-width: 1023px) and (orientation:landscape) {
+    /* Styles for tablet landscape */
+    .flexmain {
+      display: grid; /* Explicitly set grid display */
+      grid-template-columns: repeat(3, 1fr); /* Two items per row */
+      gap: 16px; /* Adjust spacing between items */
+    
+  }
+  
+  }
+  @media (min-width: 768px) and (max-width: 1023px) and (orientation:portrait) {
+    /* Styles for tablet portrait */
+    .flexmain {
+      display: grid; /* Explicitly set grid display */
+      grid-template-columns: repeat(2, 1fr); /* Two items per row */
+      gap: 16px; /* Adjust spacing between items */
+  
+    }
+    
+  
+    
+    
+  }
+  @media (min-width: 480px) and (max-width: 767px) and (orientation:landscape) {
+    /* Styles for phone landscape */
+    /*cvpage*/
+  
+    /* hobbiespage*/
+     .flexmain {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .flex {
+      padding-top: 3%;
+      padding-bottom: 3%;
+      text-align: center;
+      
+      /* height: auto; */
+      
+      
+  }
+  .flex img{
+    height: 229px;
+    object-fit: cover;
+    
+  }
+  .flexmain {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px; /* Adjust spacing between grid items */
+      margin: 0 auto;
+  }
+  }
+  @media (max-width: 479px) and (orientation:portrait) {
+    /* Styles for phone portrait */
+    /*cv pages */
+    .skills-section {
+      flex: 1 1 100%; /* Each section takes full width */
+      display: block;
+    }
+    .flex-cv{
+      flex: 1 1 100%; /* Each section takes full width */
+      display: block;
+      
+  
+    }
+    .flex{
+      padding-top: 3%;
+      padding-bottom: 3%;
+    }
+    /*Hobbies page*/
+    .flexmain {
+      grid-template-columns: repeat(1, 1fr);
+      
+      /*gap: 25px;*/
+    }
+  .flex img{
+    
+    object-fit: cover;
+    
+  
+  }
+  }
+  .flex{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  .flex p{
+    text-align: center;
+  }
+  /* Tablet Portrait */
+  @media (min-width: 600px) and (max-width: 767px) and (orientation: portrait) {
+    .flexmain {
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+  }
+  
+  /* Tablet Landscape */
+  @media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+    .flexmain {
+      grid-template-columns: repeat(3, 1fr); /* Three columns */
+    }
+  }
+  
+  /* Desktop (large screens) */
+  @media (min-width: 1024px) {
+    .flexmain {
+      display: flex;
+      /*justify-content: space-between;*/
+    }
+  
+    .gallery > div {
+      width: 23%; /* Ensure that images have space to fit 4 in a row */
+    }
+  }
+  
+  /* Phone Landscape */
+  @media (min-width: 480px) and (max-width: 599px) and (orientation: landscape) {
+    .flexmain {
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+  }
+  /*cv page */
+  .cv h1{
+    padding-bottom: 4%;
+  }
+  
+  .skills-section h3{
+    margin: auto;
+    text-align: center;
+  }
+  .skills-section {
+    padding-top: 4%;
+    background-color: rgb(202, 217, 227);
+    box-shadow: 3px 3px 5px 3px;
+    font-size: 15px;
+    
+    color: rgb(42, 36, 36);
+  }
+  
+  .skills-section h2 {
+    margin-left: 5px;
+  }
+  
+  .oneline {
+    display: flex; /* Use flex to align items in one line */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Ensure proper spacing between items */
+    margin-bottom: 10px; /* Add spacing between rows */
+  }
+  
+  .oneline h4 {
+    flex-shrink: 0; /* Prevent the skill title from shrinking */
+    width: 30%; /* Adjust the width for consistent spacing */
+    margin: 0; /* Remove extra margin *//* Remove extra margin */
+  }
+  
+  .skill-container {
+    background-color: rgb(232, 235, 240);
+    border-radius: 1rem;
+    height: 16px;
+    width: 70%; 
+    padding: 1.5px;
+    display: flex; 
+    
+  }
+  
+  .skill {
+    background: blue;
+    height: 100%;
+    justify-content: center;
+    font-size: 10px;
+    color: white;
+    border-radius: 1rem;
+    display: flex;
+  }
+  
+  span {
+    margin: auto;
+  }
+  .s11{
+    width: 90%;
+  }
+  .s22{
+    width: 30%;
+  
+  }
+  .s33{
+    width: 100%;
+  
+  }
+  .s44{
+    width: 69%;
+  
+  }
+  
+  .s1 {
+    width: 90%;
+  }
+  
+  .s2 {
+    width: 90%;
+  }
+  
+  .s3 {
+    width: 60%;
+  }
+  
+  .s4 {
+    width: 30%;
+  }
+  
+  .s5 {
+    width: 50%;
+  }
+  
+  .s6 {
+    width: 60%;
+  }
+  
+  .s7 {
+    width: 70%;
+  }
+  .load{
+    animation: loading 1s linear ;
+  }
+  @keyframes loading{
+    0%{width:0%}
+  
+  }
+  
+  
+  th,td{
+    border: 1px solid black;
+  }
+  table {
+    width: 100%; /* Makes the table span the container width */
+    border-collapse: collapse; /* Ensures no double borders */
+    margin: 20px 0; /* Adds spacing around the table */
+  }
+  
+  th, td {
+    padding: 10px; /* Adds padding inside cells for readability */
+    text-align: left; /* Aligns text to the left */
+  }
+  
+  thead th {
+    border-bottom: 2px solid black; /* Adds a bold bottom border for the header */
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid black; /* Adds a horizontal line between rows */
+  }
+  
+  tbody td:not(:last-child), thead th:not(:last-child) {
+    border-right: 1px solid black; /* Adds vertical lines between columns */
+  }
+  
+  .cv h1{
+    text-align: center;
+    padding-top: 50px;
+  }
+  .cvprofile{
+    text-align: center;
+    align-items: center;
+    padding-bottom: 2%;
+  
+  }
+  .cvprofile img{
+    height:auto;
+    width: 17%;
+    object-fit: contain;
+    padding: 0px;
+    
+  
+  }
+  .skills-section{
+    padding: 4%;
+    border-radius: 1rem;
+   
+  }
+  .cv{
+    align-items: center;
+  }
+  .flex-cv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%; /* Adds spacing between the sections */
+    margin: auto;
+    width: 100%; /* Full width of the parent container */
+    margin: auto; /* Centers the flex container on the page */
+  }
+  
+  
+  .language h3{
+    padding-bottom: 45px;
+  }.flex-cv {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 2%; /* Add spacing between sections */
+    justify-content: center; /* Center items horizontally */
+    margin: auto;
+    width: 100%;
+  }
+  
+  .skills-section {
+    flex: 1 1 calc(45% - 20px); /* Default: Each section takes 45% width */
+    padding: 20px;
+    
+    box-shadow: 3px 3px 5px rgba(189, 216, 236, 0.2);
+    border-radius: 20px;
+    
+  margin-top: 4%;
+      margin-top: 4%;
+  }
+  
+  
+  .flex-cv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+  .main-paragraph{
+    padding-bottom: 2%;
+  }
+  .headercv{
+     text-align: center;
+  }
+  
+  .skills-section:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .hobbies{
+      border-radius: 30px;
+      height: 300px;
+      width: 70%;
+      align-self: center;
+      margin-top: 4%;
+    }
+    .hflex{
+      padding: 0px;
+      align-items: center;
+      display: flex;
+      font-size: 12px;
+      justify-content: space-between;
+    }
+    .hflex div img{
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+    .hflex div{
+      display: flex;
+      flex-direction: column;
+    }
+    
+    
+  
+  
+  /* Responsive Styles with Orientation */
+  
+  /* Phones - Portrait */
+  @media (max-width: 768px) and (orientation: portrait) {
+    .skills-section {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    
+      width: 100%;
+      flex: 1 1 100%; /* Full width for each section */
+      
+      
+      align-items: center;
+    }
+    
+  
+    .flex-cv {
+      flex-direction: column; /* Stack sections vertically */
+    }
+    .hobbies{
+      border-radius: 30px;
+      height: 300px;
+      width: 70%;
+      align-self: center;
+      margin-top: 4%;
+    }
+    .hflex{
+      padding: 0px;
+      align-items: center;
+      display: flex;
+      font-size: 12px;
+      justify-content: space-between;
+    }
+    .hflex div img{
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+    .hflex div{
+      display: flex;
+      flex-direction: column;
+    }
+    
+  }
+  
+  /* Phones - Landscape */
+  @media (max-width: 768px) and (orientation: landscape) {
+    .skills-section {
+      width: 100%;
+      flex: 1 1 calc(50% - 10px); /* Two sections per row for landscape */
+    }
+  
+    .flex-cv {
+      gap: 5%; /* Add extra spacing in landscape mode */
+    }
+    .flex-phone{
+      display: flex;
+      flex-direction: row;
+
+    }
+    .hobbies{
+      max-width: 30%;
+    }
+    .sss{
+      max-width: 60%;
+    }
+    .hobbies{
+      border-radius: 30px;
+      height: 300px;
+      width: 70%;
+      align-self: center;
+      margin-top: 4%;
+    }
+    .hflex{
+      padding: 0px;
+      align-items: center;
+      display: flex;
+      font-size: 10px;
+      justify-content: space-between;
+    }
+    
+    p{
+      padding-bottom: 4px;
+    }
+    .hflex div img{
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+    .hflex div{
+      display: flex;
+      flex-direction: column;
+    }
+    
+  }
+  
+  .hflex{
+    padding: 0px;
+    align-items: center;
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+  }
+ 
+ .hobbies{
+  align-self: center;
+  text-align: center;
+ }
+ 
+  
+  .hflex div{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+  }
+  
+  /* Tablets - Portrait */
+  @media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+    .skills-section {
+      width: 46%;
+      flex: 1 1 calc(50% - 20px); /* Two sections per row */
+    }
+    .hflex div img{
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+    }
+    .hobbies h3{
+      padding-bottom: 30px;
+    }
+  }
+  
+  /* Tablets - Landscape */
+  @media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    .skills-section {
+      width: 46%;
+      flex: 1 1 calc(33.33% - 20px); /* Three sections per row for landscape */
+    }
+    .hflex div img{
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+    }
+    .hobbies h3{
+      padding-bottom: 30px;
+    }
+  }
+  
+  /* Desktops */
+  @media (min-width: 1025px) {
+    .skills-section {
+      width: 46%;
+      flex: 1 1 calc(45% - 20px); /* Default: Two sections per row */
+    }
+    .hflex div img{
+      width: 65px;
+      height: 65px;
+      object-fit: contain;
+    }
+    .hobbies h3{
+      padding-bottom: 30px;
+    }
+  }
+
+
+
+
+
+
+/*home page*/
+
+  .profile{
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile img {
+    width: 100%;
+    height: 100%; 
+    border-radius: 50%; 
+    border: 15px solid var(--headerfooter-text); 
+      
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    object-fit: cover;
+    object-position: center top ;
+     
+  }
+
+
+
+.home{
+padding: 50px;
+text-align: center;
+
+
+}
+.home h2{
+color: var(--normal);
+}
+.intro{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+justify-content: space-between;
+text-align: center;
+height: 100%;
+}
+.home p{
+padding: 0px;
+}
+.span1{
+    color: var(--normal);
+    font-weight: bold;
+}
+.span2{
+    font-weight: bold;
+    color: black;
+}
+.home main{
+    padding-bottom: auto;
+    padding-top: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+  /*home page*/
+  @media (min-width: 1024px) {
+    /* Styles for desktop screens */
+    .home h2{
+        padding-top: 25px;
+        padding-bottom: 15px;
+    }
+    
+    .home h1{
+        padding-bottom: 10px;
+    }
+    .profile{
+        width: 350px;
+        height:350px;
+        align-items: center;
+        justify-content: center;
+        }
+        
+        
+    
+    
+  }
+  
+  
+  
+  
+  
+  @media (min-width: 768px) and (max-width: 1023px) and (orientation:landscape) {
+    /*tablet landscape*/
+    
+    .intro {
+        display: flex;
+        flex-direction: row; /* Arrange the profile and text horizontally */
+        align-items: center; /* Vertically align the text to the center of the profile picture */
+        justify-content: center; /* Center both items horizontally on the page */
+        gap: 20px; /* Add space between the profile picture and the text */
+      }
+      
+      
+      .home h2{
+        padding-bottom: 35px;
+      }
+      .profile{
+        width: 350px;
+        height: 350px;
+        align-items: center;
+        justify-content: center;
+        }
+  
+  }
+  @media (min-width: 768px) and (max-width: 1023px) and (orientation:portrait) {
+    /* Styles for tablet portrait */
+    main{
+        padding-top: 5%;
+    }
+    .profile{
+        width: 350px;
+        height: 350px;
+        align-items: center;
+        justify-content: center;
+        }
+    
+   
+    
+  }
+  @media (min-width: 480px) and (max-width: 767px) and (orientation:landscape) {
+    /* Styles for phone landscape */
+    main{
+        padding-bottom: 50px;
+        padding-top: 10px;
+        margin-top: 0px;
+        
+    }
+    .profile{
+        width: 220px;
+        height: 220px;
+        align-items: center;
+        justify-content: center;
+        }
+    .intro{
+        padding-bottom: 50px;
+    }
+    footer{
+        bottom: 0px;
+        margin-top: auto;
+    }
+  }
+    
+  @media (max-width: 479px) and (orientation:portrait) {
+    /* Styles for phone portrait */
+    main{
+        padding-top: 2%;
+    }
+    .profile{
+        width: 150px;
+        height: 150px;
+        align-items: center;
+        justify-content: center;
+        }
+  }
+ 
+
+  /*about page*/
+  .github-button {
+    padding: 10px 20px;
+    width: auto; 
+    align-self: center;
+    background-color: var(--primary-brand);
+    color: white; 
+    border: none; 
+    border-radius: 20px; 
+    margin-top: 15px;
+    text-align: center; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+  }
+  .github-button:hover {
+    background-color:#0056b3; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05); 
+  }
+  
+  
+  .github-button:active {
+    transform: scale(0.95); 
+  }
+  .github-button{
+    padding: 10px;
+    width: 40%;
+    align-self: center;
+    background-color: var(--primary-brand);
+    border-radius: 20px;
+    margin-top: 15px;
+    border-color: none;
+  }
+  .single{
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    background-color: var(--header-footer);
+    color: var(--headerfooter-text);
+    align-self: center;
+    padding: 16px;
+    border-radius: 30px;
+    margin-top: 4%;
+  
+  }
+  .intro-about{
+    display: flex;
+flex-direction: column;
+align-items: center;
+
+justify-content: space-between;
+text-align: center;
+height: 100%;
+    
+
+  }
+  .about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  .about .text{
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+  }
+  .about-profile img {
+    width: 100%;
+    height: 100%; 
+    border-radius: 50%; 
+    border: 5px solid var(--headerfooter-text); 
+      
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    object-fit: cover;
+    object-position: center top ;
+     
+  }
+
+
+  @media (min-width: 1024px) {
+    /* Styles for desktop screens */
+    .about-profile{
+      width: 230px;
+      height: 230px;
+     }
+   
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) and (orientation:landscape) {
+    /*tablet landscape*/
+    .about-profile{
+      width: 200px;
+      height: 200px;
+     }
+ 
+  }
+  @media (min-width: 768px) and (max-width: 1023px) and (orientation:portrait) {
+    /* Styles for tablet portrait */
+    .about-profile{
+      width: 200px;
+      height: 200px;
+     }
+ 
+    
+  }
+  @media (min-width: 480px) and (max-width: 767px) and (orientation:landscape) {
+    /* Styles for phone landscape */
+    .about-profile{
+      width: 180px;
+      height: 180px;
+      padding-bottom: 0px;
+     }
+ 
+  }
+    
+  @media (max-width: 479px) and (orientation:portrait) {
+    /* Styles for phone portrait */
+    .about-profile{
+    width:180px;
+    height: 180px;
+   }
+
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--main-background); /* Ensure --main-background is defined in :root or fallback */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Allows header and article stacking */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensures content is centered vertically even with less content */
+  }
+  
+  /* Header Styling */
+  .contact-header {
+    padding-top: 10%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-header h3 {
+    font-size: 2rem;
+    color: #ffffff; /* White color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+  }
+  
+  /* Contact Page Container */
+  .contact-page {
+    width: 50%; /* Take 50% of the viewport width */
+    max-width: 600px; /* Ensure it doesn’t get too wide on larger screens */
+    min-width: 400px; /* Prevents shrinking on smaller screens */
+    margin: 0 auto; /* Center horizontally */
+    background: rgba(255, 255, 255, 0.1); /* Glass effect */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Gradient Border Animation */
+  .contact-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    
+    z-index: -1;
+    filter: blur(8px);
+    opacity: 0.5;
+  }
+  
+  /* Contact Details */
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+   
+  }
+  
+  .contact-details a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* Set text color to white */
+    font-size: 1.1rem; /* Adjust font size */
+    display: flex; /* Align icon and text horizontally */
+    align-items: center; /* Center-align icon and text vertically */
+    gap: 15px; /* Space between icon and text */
+    padding: 10px; /* Better spacing for clickable area */
+    background: rgba(255, 255, 255, 0.05); /* Subtle background */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+  }
+  
+  .contact-details a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Highlight background on hover */
+    color: #f1c40f; /* Change text color on hover */
+    transform: translateY(-2px); /* Slightly lift on hover */
+  }
+  
+  .contact-details a img {
+    width: 36px; /* Set icon size */
+    height: 36px;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-details a:hover img {
+    transform: scale(1.2); /* Enlarge icon on hover */
+  }
+  
+  /* Last Item Styling (Location or Additional Info) */
+  .contact-details p:last-child {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.15);
+  }
+  .contact-details p {
+    
+  }
+  
+  /* Ensure proper responsiveness */
+  @media (max-width: 600px) {
+    .contact-page {
+      width: 90%; /* Use more width on smaller screens */
+      min-width: unset; /* Remove the fixed min-width */
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-page {
+      padding: 15px;
+    }
+  
+    .contact-header h3 {
+      font-size: 1.8rem;
+    }
+  
+    .contact-details p {
+      font-size: 10px;
+    }
+  }
+  .contact-page {
+    background: rgba(255, 255, 255, 0.1); /* Fallback background */
+    backdrop-filter: blur(10px); /* Glass effect */
+  }
+  
+    .contact-page {
+      backdrop-filter: none; /* Remove blur effect on mobile devices */
+    }
+    /* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30%; /* Set the sidebar width */
+  height: 100%; /* Full height of the screen */
+  background: rgba(255, 255, 255, 0.1); /* Glass effect */
+  backdrop-filter: blur(100px); /* Add blur effect */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-radius: 16px 0 0 16px; /* Rounded corners on the left */
+  padding: 20px 10px;
+  text-align: left;
+  color: #fff;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* Sidebar Links */
+.sidebar li {
+  list-style: none;
+}
+
+.sidebar li a {
+  display: block;
+  padding: 15px;
+  color: #201616;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.sidebar li a:hover {
+  background: rgb(85, 87, 91); /* Highlight on hover */
+  color: white; /* Yellow color on hover */
+}
+
+/* Sidebar Active Link */
+.sidebar li a.current {
+  background: linear-gradient(to right, var(--normal), #0D47A1);  /* Background color for active link */
+  color: white; 
+  font-weight: 300;/* Active link color */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .sidebar li a {
+    font-size: 1rem;
+  }
+}
+/*sidebar*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* General menu button position */
+.menubar {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  
+  z-index: 100;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;  /* Initially hidden */
+  width: 30%;
+  height: 100%;
+  
+  padding: 20px;
+  z-index: 1000;
+  transition: right 0.3s ease;
+}
+
+/* Active class to show sidebar */
+.sidebar.active {
+  right: 0; /* Slide in from the right */
+}
+
+/* Overlay (background behind the sidebar) */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  z-index: 999;
+}
+
+/* Show overlay when active */
+.overlay.active {
+  display: block;
+}
+
+/* Close button in sidebar */
+.sidebar .closebtn a {
+  display: block;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.sidebar .closebtn a img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Media Queries for Specific Devices */
+
+/* Tablet Portrait and Smaller Devices */
+@media (max-width: 1023px) {
+  .mainnav {
+    display: none; /* Hide main navigation */
+  }
+  .menubar {
+    display: block;  /* Show menu icon */
+  }
+}
+
+/* Desktop and Tablet Landscape */
+@media (min-width: 1024px), (min-width: 768px) and (orientation: landscape) {
+  .mainnav {
+    display: flex; /* Show main navigation */
+  }
+  .menubar {
+    display: none; /* Hide menu icon */
+  }
+  .sidebar {
+    display: none; /* Hide sidebar on desktop/landscape */
+  }
+}
+
+
+
+
+@media (min-width: 480px) and (max-width: 767px) and (orientation:landscape) {
+  p{
+    font-size: 16px;
+
+}
+footer p{
+  font-size: 10px;
+}
+
+  }
+  
+@media (max-width: 479px) and (orientation:portrait) {
+  p{
+    font-size: 16px;
+}
+footer p{
+  font-size: 10px;
+}
+
+}
+@media (min-width: 1024px) {
+  /* Styles for desktop screens */
+  p{
+    font-size: 18px;
+  
+
+}
+footer p{
+  font-size: 14px;
+}
+
+  
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation:landscape) {
+  /*tablet landscape*/
+  p{
+    font-size: 18px;
+  
+
+}
+footer p{
+  font-size: 13px;
+}
+
+  
+
+ 
+}
+@media (min-width: 768px) and (max-width: 1023px) and (orientation:portrait) {
+  /* Styles for tablet portrait */
+ 
+  p{
+    line-height: 1.6px;
+    font-size: 18px;
+  
+
+}
+footer p{
+  font-size: 13px;
+}
+
+  
+
+  
+}
+footer{
+  padding-top: 3px;
+  padding-left: 10px;
+}
+.name{
+  padding-left: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
