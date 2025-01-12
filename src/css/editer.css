@@ -1439,9 +1439,7 @@ footer p{
 }
 @media (min-width: 768px) and (max-width: 1023px) and (orientation:portrait) {
   /* Styles for tablet portrait */
- 
   p{
-    line-height: 1.6px;
     font-size: 18px;
   
 
